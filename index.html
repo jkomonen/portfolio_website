@@ -15,133 +15,138 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
   <script src="https://kit.fontawesome.com/c01dab73c8.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <!-- scroll bar -->
+  <!-- https://github.com/buzinas/simple-scrollbar -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-scrollbar@latest/simple-scrollbar.css">
+  <script src="https://cdn.jsdelivr.net/npm/simple-scrollbar@latest/simple-scrollbar.min.js"></script>
+
 </head>
 
 <body>
-  <div id="particles-js">
-    <div class="header">
-      <h2 class="name">Hey,&nbsp;I'm&nbsp;<span style="color:red">Josh</span><span style="color:white">.&nbsp;I'm&nbsp;a...</span></h2>
-      <h2>
-        <div id="typewriter">
-            <script type="text/javascript">
-              const instance = new Typewriter('#typewriter', {
-                strings: ['programmer', 'creator', 'developer'],
-                autoStart: true,
-                loop: true,
-              });
-            </script>
+  <div id="ss-container"></div>
+    <div id="particles-js">
+      <div class="header">
+        <h2 class="name">Hey,&nbsp;I'm&nbsp;<span style="color:red">Josh</span><span style="color:white">.&nbsp;I'm&nbsp;a...</span></h2>
+        <h2>
+          <div id="typewriter">
+              <script type="text/javascript">
+                const instance = new Typewriter('#typewriter', {
+                  strings: ['programmer', 'creator', 'developer'],
+                  autoStart: true,
+                  loop: true,
+                });
+              </script>
+          </div>
+        </h2>
+
+        <div class="header-icons">
+          <a href="https://github.com/jkomonen" target="_blank">
+            <i class="icon fa fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/joshkomonen" target="_blank">
+            <i class="icon fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:joshkomonen@gmail.com">
+            <i class="icon far fa-envelope"></i>
+          </a>
         </div>
-      </h2>
 
-      <div class="header-icons">
-        <a href="https://github.com/jkomonen" target="_blank">
-          <i class="icon fa fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/joshkomonen" target="_blank">
-          <i class="icon fab fa-linkedin-in"></i>
-        </a>
-        <a href="mailto:joshkomonen@gmail.com">
-          <i class="icon far fa-envelope"></i>
-        </a>
+        <div class="header-links">
+          <a href="#about" data-scroll>About Me</a>
+          <a href="#projects" data-scroll>Projects</a>
+          <a href="/resume.pdf" target="_blank">Resume</a>
+        </div>
       </div>
 
-      <div class="header-links">
-        <a href="#about" data-scroll>About Me</a>
-        <a href="#projects" data-scroll>Projects</a>
-        <a href="/resume.pdf" target="_blank">Resume</a>
-        <a href="/404.html" target="_blank">404</a>
-
-      </div>
+      <a class="down" href="#about" data-scroll>
+        <i class="icon fa fa-chevron-down"></i>
+      </a>
     </div>
 
-    <a class="down" href="#about" data-scroll>
-      <i class="icon fa fa-chevron-down"></i>
-    </a>
+    <div class="contents">
+      <div class="about-me">
+        <section id="about"></section>
+        <h1> About Me </h1>
+        <p>Josh is a software engineering student in his second year at the University of Guelph that has had a passion
+          for technology and coding since he was a kid. To stay up to date with the newest technologies, he enjoys watching 20+ tech-review
+          youtubers in his free time. He also loves coding because he finds joy in building fun
+          and helpful programs for users while learning new languages and tools at the same time.
+        </p>
+      </div>
+
+      <!-- <div class="skills">
+        <h1>My Skills</h1>
+        <div class="tech-skills">
+          <i class="devicon-c-plain-wordmark colored"></i>
+          <i class="devicon-python-plain colored"></i>
+          <i class="devicon-javascript-plain colored"></i>
+          <i class="devicon-nodejs-plain-wordmark colored"></i>
+          <i class="devicon-git-plain colored"></i>
+          <i class="devicon-html5-plain colored"></i>
+          <i class="devicon-css3-plain colored"></i>
+          <i class="devicon-mongodb-plain colored"></i>
+          <i class="devicon-linux-plain colored"></i>
+          <i class="devicon-react-plain colored"></i>
+        </div>
+        <p>This is my current skill set. I want to and am going to learn more languages and tools in my free time.
+          Currently, I'm increasing my knowledge in Javascript and React.
+        </p>
+      </div> -->
+
+      <div class="projects">
+        <section id="projects"></section>
+        <h1>Personal Projects</h1>
+
+        <div class="card-row">
+
+          <div class="card" id="left-card">
+            <img src="assets/img/social_strangers.jpg" alt="Social Strangers">
+            <div class="card-text">
+              <h4>Social Strangers</h4>
+              <p>A WhatsApp-like real time web application used to talk with strangers through text.<br>Check it out <a
+                  class="gh-link" href="https://social-strangers.web.app" target="_blank">here</a>
+              </p>
+              <div class="project-button">
+                <a class="project-link" href="https://github.com/jkomonen/social-strangers" target="_blank">Github
+                  Repository</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="right-card">
+            <img alt="Buzz Bot" src="assets/img/discord_bot.png">
+            <div class="card-text">
+              <h4>Buzz Bot</h4>
+              <p>A Discord bot intended to help moderate Discord servers while also providing games for users to play. Bot
+                still undergoing development.
+              </p>
+              <div class="project-button">
+                <a class="project-link" href="https://github.com/jkomonen/Discord-Bot" target="_blank">Github
+                  Repository</a>
+              </div>
+            </div>
+          </div>
+          <div class="card" id="right-card">
+            <img alt="To-do List" src="assets/img/todo_list.jpg">
+            <div class="card-text">
+              <h4>To-do List</h4>
+              <p>A to-do list that allows users to add, remove, and check off to-do's. Visit the live version <a
+                  class="gh-link" href="https://www.tasktracker.ml" target="_blank">here</a>
+              </p>
+              <div class="project-button">
+                <a class="project-link" href="https://github.com/jkomonen/To-Do-List" target="_blank">Github
+                  Repository</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="contents">
-    <div class="about-me">
-      <section id="about"></section>
-      <h1> About Me </h1>
-      <p>Josh is a software engineering student in his second year at the University of Guelph that has had a passion
-        for technology and coding since he was a kid. To stay up to date with the newest technologies, he enjoys watching 20+ tech-review
-        youtubers in his free time. He also loves coding because he finds joy in building fun
-        and helpful programs for users while learning new languages and tools at the same time.
-      </p>
-    </div>
-
-    <!-- <div class="skills">
-      <h1>My Skills</h1>
-      <div class="tech-skills">
-        <i class="devicon-c-plain-wordmark colored"></i>
-        <i class="devicon-python-plain colored"></i>
-        <i class="devicon-javascript-plain colored"></i>
-        <i class="devicon-nodejs-plain-wordmark colored"></i>
-        <i class="devicon-git-plain colored"></i>
-        <i class="devicon-html5-plain colored"></i>
-        <i class="devicon-css3-plain colored"></i>
-        <i class="devicon-mongodb-plain colored"></i>
-        <i class="devicon-linux-plain colored"></i>
-        <i class="devicon-react-plain colored"></i>
-      </div>
-      <p>This is my current skill set. I want to and am going to learn more languages and tools in my free time.
-        Currently, I'm increasing my knowledge in Javascript and React.
-      </p>
-    </div> -->
-
-    <div class="projects">
-      <section id="projects"></section>
-      <h1>Personal Projects</h1>
-
-      <div class="card-row">
-
-        <div class="card" id="left-card">
-          <img src="assets/img/social_strangers.jpg" alt="Social Strangers">
-          <div class="card-text">
-            <h4>Social Strangers</h4>
-            <p>A WhatsApp-like real time web application used to talk with strangers through text.<br>Check it out <a
-                class="gh-link" href="https://social-strangers.web.app" target="_blank">here</a>
-            </p>
-            <div class="project-button">
-              <a class="project-link" href="https://github.com/jkomonen/social-strangers" target="_blank">Github
-                Repository</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" id="right-card">
-          <img alt="Buzz Bot" src="assets/img/discord_bot.png">
-          <div class="card-text">
-            <h4>Buzz Bot</h4>
-            <p>A Discord bot intended to help moderate Discord servers while also providing games for users to play. Bot
-              still undergoing development.
-            </p>
-            <div class="project-button">
-              <a class="project-link" href="https://github.com/jkomonen/Discord-Bot" target="_blank">Github
-                Repository</a>
-            </div>
-          </div>
-        </div>
-        <div class="card" id="right-card">
-          <img alt="To-do List" src="assets/img/todo_list.jpg">
-          <div class="card-text">
-            <h4>To-do List</h4>
-            <p>A to-do list that allows users to add, remove, and check off to-do's. Visit the live version <a
-                class="gh-link" href="https://www.tasktracker.ml" target="_blank">here</a>
-            </p>
-            <div class="project-button">
-              <a class="project-link" href="https://github.com/jkomonen/To-Do-List" target="_blank">Github
-                Repository</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
   <script src="/assets/js/main.js"></script>
+  <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="/assets/js/particles.json"></script>
   <script>particlesJS.load('particles-js', 'assets/js/particles.json', function () { });</script>
 
