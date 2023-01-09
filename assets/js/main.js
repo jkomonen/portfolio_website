@@ -1,7 +1,3 @@
-// import SimpleScrollbar from 'simple-scrollbar'
-// import 'simple-scrollbar/simple-scrollbar.css'
-
-
 document.addEventListener(
     'DOMContentLoaded',
     () => {
@@ -11,13 +7,3 @@ document.addEventListener(
     },
     false,
   );
-
-
-
-// document.addEventListener(
-//   "DOMContentLoaded",
-//   function () {
-//       new SweetScroll({})
-
-//   },
-// );

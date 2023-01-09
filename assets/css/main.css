@@ -199,6 +199,7 @@ body {
     margin: 10px;
     display: inline-block;
     vertical-align: middle;
+    height: 700px;
 }
 
 .card h4 {
